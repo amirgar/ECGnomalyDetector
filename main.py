@@ -74,7 +74,7 @@ class AnomalyDetector(Model):
 autoencoder = AnomalyDetector()
 autoencoder.compile(optimizer='adam', loss='mae')
 history = autoencoder.fit(normal_train_data, normal_train_data,
-          epochs=500,
+          epochs=20,
           batch_size=256,
           validation_data=(test_data, test_data),
           shuffle=True)
